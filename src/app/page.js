@@ -1,4 +1,3 @@
-import axios from "axios";
 import React from "react";
 import Results from "../components/Results";
 
@@ -10,7 +9,7 @@ async function Home({ searchParams }) {
   const res = await fetch(
     `https://api.themoviedb.org/3${
       genre === "fetchTopRated" ? `/movie/top_rated` : `/trending/all/week`
-    }?api_key=663f98b62f35cf0441bf8b451b47f044&language=en-US&page=1`
+    }?api_key=${API_KEY}&language=en-US&page=1`
   );
 
   const data = await res.json();
