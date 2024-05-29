@@ -5,7 +5,7 @@ import { BsFillInfoCircleFill } from "react-icons/bs";
 import Link from "next/link";
 import DarkModeSwitch from "./DarkModeSwitch";
 
-function Header() {
+export function Header() {
   return (
     <div className="flex justify-between items-center p-3 max-w-6xl mx-auto">
       <div className="flex gap-4">
@@ -25,5 +25,3 @@ function Header() {
     </div>
   );
 }
-
-export default Header;
