@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Results from "../components/Results";
 import SwiperForPages from "../components/SwiperForPages";
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
@@ -22,8 +22,10 @@ async function Home({ searchParams }) {
 
   return (
     <div>
-      <SwiperForPages data={results} />
-      <Results results={results} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <SwiperForPages data={results} />
+        <Results results={results} />
+      </Suspense>
     </div>
   );
 }
