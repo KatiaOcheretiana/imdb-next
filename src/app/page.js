@@ -1,7 +1,7 @@
 import React from "react";
 import Results from "../components/Results";
 import SwiperForPages from "../components/SwiperForPages";
-export const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 
 async function Home({ searchParams }) {
   const genre = searchParams.genre || "fetchTrending";
