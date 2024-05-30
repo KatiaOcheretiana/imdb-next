@@ -1,6 +1,6 @@
 import React from "react";
 import Results from "../components/Results";
-
+import SwiperForPages from "../components/SwiperForPages";
 export const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 
 async function Home({ searchParams }) {
@@ -22,6 +22,7 @@ async function Home({ searchParams }) {
 
   return (
     <div>
+      <SwiperForPages data={results} />
       <Results results={results} />
     </div>
   );
